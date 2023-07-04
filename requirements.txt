@@ -3,6 +3,7 @@ cycler==0.11.0
 exceptiongroup==1.1.2
 flake8==6.0.0
 fonttools==4.40.0
+-e git+https://github.com/aleksyprok/python-intermediate-inflammation.git@e5499f12870088c8b3eadd862fe1aa9bcde8e334#egg=inflammation_analysis
 iniconfig==2.0.0
 kiwisolver==1.4.4
 matplotlib==3.7.1
