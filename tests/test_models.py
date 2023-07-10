@@ -20,6 +20,18 @@ def test_daily_mean(test, expected):
 @pytest.mark.parametrize(
     "test, expected",
     [
+        (np.array([[0, 0], [0, 0], [0, 0]]), np.array([0, 0])),
+        (np.array([[1, 2], [3, 4], [5, 6]]), np.array([3, 4])),
+    ])
+def test_daily_mean2(test, expected):
+    """Test mean function works for array of zeroes and positive integers."""
+    from inflammation.models import daily_mean
+    npt.assert_array_equal(daily_mean(test), expected)
+
+
+@pytest.mark.parametrize(
+    "test, expected",
+    [
         ([[0, 0, 0], [0, 0, 0], [0, 0, 0]], [0, 0, 0]),
         ([[4, 2, 5], [1, 6, 2], [4, 1, 9]], [4, 6, 9]),
         ([[4, -2, 5], [1, -6, 2], [-4, -1, 9]], [4, -1, 9]),
